@@ -15,11 +15,26 @@ body {
   display: block;
   font-size: 20px;
   font-weight: 600;
-  padding: 20px 0;
+  cursor: pointer;
+}
+
+.mem-vopros:after {
+  
 }
 
 .mem-text {
-    display: none;
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mem-text img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.mem-text img:hover {
+  transform: scale(1.1);
 }
 
 .mem-checkbox {
@@ -28,4 +43,13 @@ body {
 
 .mem-checkbox:checked ~ .mem-text {
   display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
+  .memsolo-faq {
+    padding: 10px;
+  }
 }
