@@ -12,12 +12,20 @@ body {
 }
 
 .mem-vopros {
+  display: block;
   font-size: 20px;
   font-weight: 600;
   padding: 20px 0;
 }
 
 .mem-text {
-  font-size: 16px;
-  padding: 20px 0;
+    display: none;
+}
+
+.mem-checkbox {
+  appearance: none;
+}
+
+.mem-checkbox:checked ~ .mem-text {
+  display: block;
 }
