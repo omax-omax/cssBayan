@@ -5,6 +5,10 @@ body {
   padding: 20px;
 }
 
+.memall {
+  max-width: 1440px;
+}
+
 .memsolo-faq {
   border: 2px solid #000;
   padding: 20px;
@@ -16,10 +20,24 @@ body {
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
+  position: relative;
 }
 
-.mem-vopros:after {
-  
+.mem-vopros:hover {
+  text-decoration: underline;
+}
+
+.mem-vopros:before {
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 15px 7.5px 0 7.5px;
+  border-color: #000 transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 10px;
 }
 
 .mem-text {
@@ -43,6 +61,12 @@ body {
 
 .mem-checkbox:checked ~ .mem-text {
   display: block;
+}
+
+.mem-checkbox:checked ~ .mem-vopros:before {
+  border-style: solid;
+  border-width: 0 7.5px 15px 7.5px;
+  border-color: transparent transparent #000000 transparent;
 }
 
 @media screen and (max-width: 1024px) {
